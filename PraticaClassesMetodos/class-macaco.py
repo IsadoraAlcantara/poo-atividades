@@ -34,8 +34,8 @@ while acao > 0:
     if acao == 1:
         macaco1.comer()
 
-    if acao == 2:
+    elif acao == 2:
         print(macaco1.verBucho())
 
-    if acao == 3:
+    elif acao == 3:
         print(macaco1.digerir())
