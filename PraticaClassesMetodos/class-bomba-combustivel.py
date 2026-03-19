@@ -21,7 +21,11 @@ class BombaCombustivel:
         return f"Tipo combustível: {self.tipoCombustivel}"
 
     def alterarQntCombustivelBomba(self, diminuiQntCombustivel):
-        self.qntCombustivel -= diminuiQntCombustivel
+        if self.qntCombustivel >= diminuiQntCombustivel:
+            self.qntCombustivel -= diminuiQntCombustivel
+            return f"Quantidade de combustível na bomba: {self.qntCombustivel}"
+
+        self.qntCombustivel = 0
         return f"Quantidade de combustível na bomba: {self.qntCombustivel}"
 
 

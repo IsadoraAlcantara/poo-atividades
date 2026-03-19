@@ -30,7 +30,7 @@ class BichinhoVirtual:
                 if self.fome < 20:
                     self.saude = 50
                 
-            return self.fome
+            return f"A fome atual do bichinho {self.nome} é {self.fome}"
 
         elif escolhaAcao == 2:
             print("Oções de comida:\n")
@@ -43,7 +43,7 @@ class BichinhoVirtual:
             if self.fome > 100:
                 self.fome = 100
 
-        return f"A fome atual do bichinho {self.nome} é {self.fome}"
+            return f"A fome atual do bichinho {self.nome} é {self.fome}"
 
     def recuperaSaude(self):
         self.saude += 10
@@ -58,7 +58,7 @@ bichinho1 = BichinhoVirtual("Sem nome")
 
 while acao > 0:
     print(f"{bichinho1.mostrarAtributos()} \n")
-    acao = int(input("O que deseja fazer: \nMostrar atributos: 1 \nMudar nome: 2 \nBrincar ou comer: 3 \nRecuperar sáude: 4 \nEnvelhecer: 5\nOpção"))
+    acao = int(input("O que deseja fazer: \nMostrar atributos: 1 \nMudar nome: 2 \nBrincar ou comer: 3 \nRecuperar sáude: 4 \nEnvelhecer: 5\nOpção: "))
 
     if acao == 1:
         print(f"{bichinho1.mostrarAtributos()} \n")
