@@ -5,11 +5,14 @@
 class Usuario():
 
     def __init__(self, nomeUsuario):
-        self.__nomeUsuario = nomeUsuario
+        self._nomeUsuario = nomeUsuario
 
     def definaNome(self, novoNome):
-        self.__nomeUsuario = novoNome
-        return(f"Novo nome: {self.__nomeUsuario}")
+        self._nomeUsuario = novoNome
+        return(f"Novo nome: {self._nomeUsuario}")
+    
+    def getNome(self):
+        return(f"Nome usuário: {self._nomeUsuario}")
     
 class Admin(Usuario):
 
@@ -20,4 +23,7 @@ class Admin(Usuario):
         return "Admin"
     
     def digaOla(self):
-        return "Olá, Admin, "
+        return(f"Olá Admin, {self._nomeUsuario}")
+    
+admin1 = Admin("Baltazar")
+print(admin1.getNome())
