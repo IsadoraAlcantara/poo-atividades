@@ -17,4 +17,6 @@ class Aluno(Pessoa):
         return(f"Nome aluno: {self.nome}, idade aluno: {self.idade}, nota aluno: {self.nota}")
     
 pessoa1 = Pessoa("Ana", 23)
-aluno1 = Aluno
+aluno1 = Aluno("Luiz", 50, 7)
+print(pessoa1.getPessoa())
+print(aluno1.getAluno())
