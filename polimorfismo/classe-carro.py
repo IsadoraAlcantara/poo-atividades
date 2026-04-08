@@ -6,6 +6,7 @@ class Carro:
     def dirigir(self):
         pass
 
+
 class CarroGasolina(Carro):
 
     def __init__(self, modeloCarro):
@@ -13,7 +14,8 @@ class CarroGasolina(Carro):
 
     def dirigir(self):
         return f"{self.modeloCarro}: ronco e fumaça"
-    
+
+
 class CarroEletrico(Carro):
 
     def __init__(self, modeloCarro):
@@ -21,6 +23,7 @@ class CarroEletrico(Carro):
 
     def dirigir(self):
         return f"{self.modeloCarro}: silêncio e suavidade"
+
 
 for carro in (CarroGasolina("Corolla"), CarroEletrico("Dolphin")):
     print(carro.dirigir())
