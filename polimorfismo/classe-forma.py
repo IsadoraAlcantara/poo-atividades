@@ -1,5 +1,6 @@
 from math import pi
 
+
 class Forma:
 
     def __init__(self, tipoForma):
@@ -8,6 +9,7 @@ class Forma:
     def area(self):
         pass
 
+
 class Quadrado(Forma):
 
     def __init__(self, lado):
@@ -15,8 +17,9 @@ class Quadrado(Forma):
         self.lado = lado
 
     def area(self):
-        areaTotal = self.lado ** 2
+        areaTotal = self.lado**2
         return f"O {self.tipoForma} tem {areaTotal} cm² de área"
+
 
 class Circulo(Forma):
 
@@ -25,8 +28,9 @@ class Circulo(Forma):
         self.raio = raio
 
     def area(self):
-        areaTotal = pi * self.raio ** 2
+        areaTotal = pi * self.raio**2
         return f"O {self.tipoForma} tem {round(areaTotal, 2)} cm² de área"
-    
+
+
 for forma in (Quadrado(2), Circulo(5)):
     print(forma.area())
